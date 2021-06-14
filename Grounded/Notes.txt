@@ -1,0 +1,25 @@
+Objectives and stuff @.@
+
+We have been trying to contact you about your vehicles extended warranty
+Snarkey McSnarkerton
+
+
+
+
+using System.Collections.Generic;
+
+namespace Grounded.Models
+{
+  public class Emotion
+  {
+    public Emotion()
+    {
+      this.Resources = new HashSet<Resource>();
+    }
+    public int EmotionId { get; set; }
+    public string Name { get; set; }
+    public string Quote { get; set; }
+    public string Image { get; set; } // Can we make this work?
+    public virtual ICollection<Resource> Resources { get; set; }
+  }
+}
