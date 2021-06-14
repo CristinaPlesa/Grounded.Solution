@@ -16,3 +16,4 @@ namespace Grounded.Models
     public string ResourceLink { get; set; }
   }
 }
+
