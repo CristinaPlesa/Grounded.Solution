@@ -2,14 +2,16 @@
 using Grounded.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Grounded.Migrations
 {
     [DbContext(typeof(GroundedContext))]
-    partial class GroundedContextModelSnapshot : ModelSnapshot
+    [Migration("20210614202743_SeedData")]
+    partial class SeedData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,6 +23,9 @@ namespace Grounded.Migrations
                     b.Property<int>("ResourceId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    b.Property<string>("ResourceAdvice")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<string>("ResourceColor")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
@@ -40,9 +45,6 @@ namespace Grounded.Migrations
                     b.Property<string>("ResourceMusic")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
-                    b.Property<string>("ResourceName")
-                        .HasColumnType("longtext CHARACTER SET utf8mb4");
-
                     b.Property<string>("ResourceQuote")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
@@ -54,13 +56,13 @@ namespace Grounded.Migrations
                         new
                         {
                             ResourceId = 1,
+                            ResourceAdvice = "Get wasted",
                             ResourceColor = "Orange",
                             ResourceExercise = "Everyday is a half day if you just fucking leave.",
                             ResourceImage = "Lets see if this loads",
-                            ResourceLink = "https://www.sadanduseless.com/legs-or-sausages-gallery/",
+                            ResourceLink = "Some url",
                             ResourceMeditation = "With your eyes closed, close your eyes.",
-                            ResourceMusic = "cheerful",
-                            ResourceName = "TestName",
+                            ResourceMusic = "Api search query",
                             ResourceQuote = "Let everything happen to you, beauty and terror, just keep going, no feeling is final."
                         });
                 });

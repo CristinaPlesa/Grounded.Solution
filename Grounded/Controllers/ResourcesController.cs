@@ -13,25 +13,32 @@ namespace Grounded.Controllers
     [ApiController]
     public class ResourcesController : ControllerBase
     {
-        private readonly GroundedContext _context;
+        private readonly GroundedContext _db;
 
-        public ResourcesController(GroundedContext context)
+        public ResourcesController(GroundedContext db)
         {
-            _context = context;
+            _db = db;
         }
 
         // GET: api/Resources
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Resource>>> GetResources()
+        public async Task<ActionResult<IEnumerable<Resource>>> Get(string resourceName)
         {
-            return await _context.Resources.ToListAsync();
+        var query = _db.Resources.AsQueryable();
+
+        if (resourceName != null)
+        {
+            query = query.Where(entry => entry.ResourceName == resourceName);
+        }   
+
+        return await query.ToListAsync();
         }
 
         // GET: api/Resources/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Resource>> GetResource(int id)
         {
-            var resource = await _context.Resources.FindAsync(id);
+            var resource = await _db.Resources.FindAsync(id);
 
             if (resource == null)
             {
@@ -51,11 +58,11 @@ namespace Grounded.Controllers
                 return BadRequest();
             }
 
-            _context.Entry(resource).State = EntityState.Modified;
+            _db.Entry(resource).State = EntityState.Modified;
 
             try
             {
-                await _context.SaveChangesAsync();
+                await _db.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -77,8 +84,8 @@ namespace Grounded.Controllers
         [HttpPost]
         public async Task<ActionResult<Resource>> PostResource(Resource resource)
         {
-            _context.Resources.Add(resource);
-            await _context.SaveChangesAsync();
+            _db.Resources.Add(resource);
+            await _db.SaveChangesAsync();
 
             return CreatedAtAction("GetResource", new { id = resource.ResourceId }, resource);
         }
@@ -87,21 +94,21 @@ namespace Grounded.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteResource(int id)
         {
-            var resource = await _context.Resources.FindAsync(id);
+            var resource = await _db.Resources.FindAsync(id);
             if (resource == null)
             {
                 return NotFound();
             }
 
-            _context.Resources.Remove(resource);
-            await _context.SaveChangesAsync();
+            _db.Resources.Remove(resource);
+            await _db.SaveChangesAsync();
 
             return NoContent();
         }
 
         private bool ResourceExists(int id)
         {
-            return _context.Resources.Any(e => e.ResourceId == id);
+            return _db.Resources.Any(e => e.ResourceId == id);
         }
     }
 }
