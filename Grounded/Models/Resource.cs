@@ -8,7 +8,6 @@ namespace Grounded.Models
     public int ResourceId { get; set; }
     public string ResourceName { get; set; }
     public string ResourceQuote { get; set; }
-    public string ResourceMeditation { get; set; }
     public string ResourceExercise { get; set; }
     public string ResourceColor { get; set; }
     public string ResourceMusic { get; set; }
