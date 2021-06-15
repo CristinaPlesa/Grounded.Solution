@@ -5,6 +5,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Grounded.Models;
+using System;
+using System.Reflection;
+using System.IO;
+using Microsoft.OpenApi.Models;
 
 namespace Grounded
 {
@@ -23,15 +27,47 @@ namespace Grounded
 
       services.AddDbContext<GroundedContext>(opt => opt.UseMySql(Configuration["ConnectionStrings:DefaultConnection"], ServerVersion.AutoDetect(Configuration["ConnectionStrings:DefaultConnection"])));
       services.AddControllers();
+      services.AddSwaggerGen(c =>
+      {
+          c.SwaggerDoc("v1", new OpenApiInfo
+          {
+              Version = "v1",
+              Title = "Grounded API",
+              Description = "Grounding exercise Web API",
+              TermsOfService = new Uri("https://www.sadanduseless.com/legs-or-sausages-gallery/"),
+              Contact = new OpenApiContact
+              {
+                  Name = "Marney Mallory, Isaac Moreno, Jesse White, Tiffany Greathead, Cristina Plesa",
+                  Email = "marney.mallory@gmail.com",
+                  Url = new Uri("https://www.sadanduseless.com/legs-or-sausages-gallery/"),
+              },
+              License = new OpenApiLicense
+              {
+                  Name = "Use under LICX",
+                  Url = new Uri("https://www.sadanduseless.com/legs-or-sausages-gallery/"),
+              }
+          });
+        });     
+
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-    {
+    { 
       if (env.IsDevelopment())
       {
         app.UseDeveloperExceptionPage();
       }
+        app.UseSwagger(c =>
+        {
+            c.SerializeAsV2 = true;
+        });
+        app.UseSwagger();
+        app.UseSwaggerUI(c =>
+        {
+            c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+            c.RoutePrefix = string.Empty;
+        });
             // app.UseHttpsRedirection();
 
             app.UseRouting();
