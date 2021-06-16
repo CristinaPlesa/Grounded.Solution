@@ -2,14 +2,16 @@
 using Grounded.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Grounded.Migrations
 {
     [DbContext(typeof(GroundedContext))]
-    partial class GroundedContextModelSnapshot : ModelSnapshot
+    [Migration("20210616203746_AddAltDescription")]
+    partial class AddAltDescription
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -13,6 +13,7 @@ namespace Grounded.Models
     public string ResourceMusic { get; set; }
     public string ResourceImage { get; set; }
     public string ResourceLink { get; set; }
+    public string AltDescription { get; set; }
   }
 }
 

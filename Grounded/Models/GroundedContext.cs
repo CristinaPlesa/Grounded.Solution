@@ -24,7 +24,8 @@ namespace Grounded.Models
           ResourceColor = "Turquoise",
           ResourceMusic = "https://open.spotify.com/track/2sANicYotJYrO53QdGHOV5?si=f25fff5a734a495f",
           ResourceImage = "https://unsplash.com/photos/dQejX2ucPBs",
-          ResourceLink = "https://www.healthline.com/health/anxiety-exercises#mindfulness"
+          ResourceLink = "https://www.healthline.com/health/anxiety-exercises#mindfulness",
+          AltDescription = "Image of sunset over hills"
         },
         new Resource
         {
@@ -35,7 +36,8 @@ namespace Grounded.Models
           ResourceColor = "Violet",
           ResourceMusic = "https://open.spotify.com/track/4GSDkZt7GcmzBWmsMcpaVO?si=f5892c71714d4dc4",
           ResourceImage = "https://unsplash.com/photos/Vs_zkj1sEHc",
-          ResourceLink = "https://www.healthline.com/health/mental-health/how-to-stop-feeling-guilty#talk-to-people"
+          ResourceLink = "https://www.healthline.com/health/mental-health/how-to-stop-feeling-guilty#talk-to-people", 
+          AltDescription = ""
         },
         new Resource
         {
@@ -46,7 +48,8 @@ namespace Grounded.Models
           ResourceColor = "Orange",
           ResourceMusic = "https://open.spotify.com/track/25RDHbzKzGSUefENv5uz9M?si=61589008ed6341f2",
           ResourceImage = "https://unsplash.com/photos/CtLx4qCdhf8",
-          ResourceLink = "https://fit4mom.com/blog/7-mental-health-exercises-to-reduce-anxiety-and-depression"
+          ResourceLink = "https://fit4mom.com/blog/7-mental-health-exercises-to-reduce-anxiety-and-depression", 
+          AltDescription = ""
         },
          new Resource
         {
@@ -57,7 +60,8 @@ namespace Grounded.Models
           ResourceColor = "blue-green",
           ResourceMusic = "https://open.spotify.com/track/6epIhVc3Zn6AUZ27EsOLZt?si=5d8e25c2b00d4d6e",
           ResourceImage = "",
-          ResourceLink = "https://drsarahallen.com/7-ways-to-calm/"
+          ResourceLink = "https://drsarahallen.com/7-ways-to-calm/",
+          AltDescription = ""
         },
          new Resource
         {
@@ -68,7 +72,8 @@ namespace Grounded.Models
           ResourceColor = "Lavender",
           ResourceMusic = "https://open.spotify.com/track/4z0X671zhnwxj9YklzDyhv?si=abf5c8e6129b498f",
           ResourceImage = "",
-          ResourceLink = "https://www.healthline.com/health/box-breathing"
+          ResourceLink = "https://www.healthline.com/health/box-breathing",
+          AltDescription = ""
         }, 
          new Resource
         {
@@ -79,7 +84,8 @@ namespace Grounded.Models
           ResourceColor = "Turquoise",
           ResourceMusic = "https://open.spotify.com/track/20QeXpfRB5GWK46PlXr1In?si=86b09455a29d41b3",
           ResourceImage = "",
-          ResourceLink = "https://declutterthemind.com/guided-meditation/anger/"
+          ResourceLink = "https://declutterthemind.com/guided-meditation/anger/",
+          AltDescription = ""
         },
          new Resource
         {
@@ -90,7 +96,8 @@ namespace Grounded.Models
           ResourceColor = "Green",
           ResourceMusic = "https://open.spotify.com/track/18ETUDvgfFPonyIjOwRFGu?si=3dc30ea49cff4f00",
           ResourceImage = "",
-          ResourceLink = "https://www.health.harvard.edu/mind-and-mood/six-relaxation-techniques-to-reduce-stress"
+          ResourceLink = "https://www.health.harvard.edu/mind-and-mood/six-relaxation-techniques-to-reduce-stress",
+          AltDescription = ""
         },
          new Resource
         {
@@ -101,7 +108,8 @@ namespace Grounded.Models
           ResourceColor = "FCBF49",
           ResourceMusic = "Let’s Dance David Bowie: https://open.spotify.com/track/2tgw0vmJDgckHwW2PdYTGo?si=80bd03eb43244f3b",
           ResourceImage = "https://unsplash.com/photos/efe3IfUqnfY",
-          ResourceLink = "https://www.mindbodygreen.com/articles/meditation-for-sadness"
+          ResourceLink = "https://www.mindbodygreen.com/articles/meditation-for-sadness",
+          AltDescription = ""
         },
          new Resource
         {
@@ -112,7 +120,8 @@ namespace Grounded.Models
           ResourceColor = "OA9396",
           ResourceMusic = "Lila Rodriguez Jr.: https://open.spotify.com/track/7ckJgqAp6jAUSJ9Av2t9LY?si=9a48827d174f4587",
           ResourceImage = "https://unsplash.com/photos/ruQHpukrN7c",
-          ResourceLink = "https://www.helpguide.org/articles/stress/relaxation-techniques-for-stress-relief.htm"
+          ResourceLink = "https://www.helpguide.org/articles/stress/relaxation-techniques-for-stress-relief.htm",
+          AltDescription = ""
         },
          new Resource
         {
@@ -123,7 +132,8 @@ namespace Grounded.Models
           ResourceColor = "Rose",
           ResourceMusic = "https://open.spotify.com/track/0VjIjW4GlUZAMYd2vXMi3b?si=9abb1d91e13e45e7",
           ResourceImage = "https://unsplash.com/photos/-SbQgia5ggg",
-          ResourceLink = "https://www.wikihow.com/Feel-More-Secure"
+          ResourceLink = "https://www.wikihow.com/Feel-More-Secure",
+          AltDescription = ""
         }
       );
     }
