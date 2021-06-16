@@ -20,7 +20,7 @@ namespace Grounded.Models
           ResourceId = 1,
           ResourceName = "Anxious",
           ResourceQuote = "It's okay to talk about mental health issues. It's okay to admit that you have anxiety. It doesn't take away from your power. It's totally normal. - Torrey DeVitto",
-          ResourceExercise = "1. Find a quiet and comfortable place to sit and close your eyes. 2. Notice how your breathing and body feel. 3.Now shift your awareness to the sensations you observe in your surroundings. Ask yourself What’s happening outside of my body? Notice what you hear, smell, and feel in your environment. 4. Change your awareness several times from your body to your environment and back again until your anxiety starts to fade.",
+          ResourceExercise = "1. Find a quiet and comfortable place to sit and close your eyes. 2. Notice how your breathing and body feel. 3. Now shift your awareness to the sensations you observe in your surroundings. Ask yourself What’s happening outside of my body? Notice what you hear, smell, and feel in your environment. 4. Change your awareness several times from your body to your environment and back again until your anxiety starts to fade.",
           ResourceColor = "Turquoise",
           ResourceMusic = "https://open.spotify.com/embed/track/4OHJmCwMAexvmRsBWToZMP?theme=0",
           ResourceImage = "https://images.unsplash.com/photo-1500534623283-312aade485b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80",
